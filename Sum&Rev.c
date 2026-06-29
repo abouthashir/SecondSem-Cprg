@@ -1,22 +1,25 @@
 #include <stdio.h>
+#include <conio.h>
 
-int main()
+void main()
 {
     int num, rev = 0, sum = 0, d;
+
+    clrscr();
 
     printf("Enter a number: ");
     scanf("%d", &num);
 
-    while (num != 0)
+    while(num != 0)
     {
         d = num % 10;
-        num = num / 10;
-        sum += d;
+        sum = sum + d;
         rev = rev * 10 + d;
+        num = num / 10;
     }
 
-    printf("Sum of the digits = %d", sum);
+    printf("\nSum of digits = %d", sum);
     printf("\nReverse of the number = %d", rev);
 
-    return 0;
+    getch();
 }
